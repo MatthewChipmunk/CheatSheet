@@ -183,21 +183,43 @@ def dvd():
                                               'divisible by 4\n'
                                               '_______________________________________________\n'
                                               'If the last digit of a number is 0 or 5, then the number is divisible '
-                                              'by 2')
+                                              'by 2\n'
+                                              '_______________________________________________'
+                                              'If the number is even and their sum is divisible by 3, then the number '
+                                              'is divisible by 6\n'
+                                              '_______________________________________________\n'
+                                              'If the number\'s last 3 digits is divisible by 8, then the number is '
+                                              'divisible by 8\n'
+                                              'If the sum of all the number\'s digits is divisible by 9, then the '
+                                              'number is divisible by 8')
 
 
 def gp():
     messagebox.showinfo('Geometric Probability', 'The formula for Geometric Probability is\n(Size of Successful '
                                                  'Region)/(Size of possible region)')
 
+
 def quadratics():
     top = Toplevel()
     Button(top, text='Quadratic Formula', height=0, command=q).pack()
     Button(top, text='Vieta\'s Formula', height=0, command=v).pack()
-   
+
+
 def equation():
     messagebox.showinfo('Graph Equations', 'ALl graph equations\'form is y=mx+b, which y and x are the coordinate '
                                            'pair, b is the Y-intercept, and m is the slope')
+
+
+def disf():
+    messagebox.showinfo('Coordinate Distance Formula', 'The Distance formula is sqrt((x₂-x₁)²-(y₂-y₁)² where (x₂,'
+                                                       'y₂) and (x₁,y₁) are any pairs')
+
+
+def grap():
+    top = Toplevel()
+    Button(top, text='Slope Formula', command=Slope, height=0).pack()
+    Button(top, text='Midpoint Formula', command=Midpoint, height=0).pack()
+    Button(top, text='Coordinate Distance Formula', command=disf, height=0).pack()
 
 
 # Main Page
@@ -238,8 +260,7 @@ Button(bf, text='Triangles Formula and Methods', command=triangles, height=0).pa
 # Algebra
 algeria = LabelFrame(second_frame, text='Algebra', bg='red', fg='green')
 algeria.pack(padx=10, pady=10)
-Button(algeria, text='Slope Formula', command=Slope, height=0).pack()
-Button(algeria, text='Midpoint Formula', command=Midpoint, height=0).pack()
+Button(algeria, text='Graph Tricks', height=0, command=grap).pack()
 Button(algeria, text='Arithmetic Mean', command=am, height=0).pack()
 Button(algeria, text='Geometry Mean', command=gm, height=0).pack()
 Button(algeria, text='Distance, Speed, and Time formula', height=0, command=dis).pack()
