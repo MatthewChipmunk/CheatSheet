@@ -194,6 +194,10 @@ def quadratics():
     top = Toplevel()
     Button(top, text='Quadratic Formula', height=0, command=q).pack()
     Button(top, text='Vieta\'s Formula', height=0, command=v).pack()
+   
+def equation():
+    messagebox.showinfo('Graph Equations', 'ALl graph equations\'form is y=mx+b, which y and x are the coordinate '
+                                           'pair, b is the Y-intercept, and m is the slope')
 
 
 # Main Page
@@ -241,6 +245,7 @@ Button(algeria, text='Geometry Mean', command=gm, height=0).pack()
 Button(algeria, text='Distance, Speed, and Time formula', height=0, command=dis).pack()
 Button(algeria, text='Quadratic Factoring Tricks', height=0, command=quadratics).pack()
 Button(algeria, text='Useful Factorizations', height=0, command=f).pack()
+Button(algeria, text='All Graph Equations', height=0, command=equation).pack()
 # Number Theory
 nt = LabelFrame(second_frame, text='Number Theory', bg='orange', fg="blue")
 nt.pack(padx=5, pady=5)
