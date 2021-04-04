@@ -240,7 +240,7 @@ Button(algeria, text='Arithmetic Mean', command=am, height=0).pack()
 Button(algeria, text='Geometry Mean', command=gm, height=0).pack()
 Button(algeria, text='Distance, Speed, and Time formula', height=0, command=dis).pack()
 Button(algeria, text='Quadratic Factoring Tricks', height=0, command=quadratics).pack()
-Button(top, text='Useful Factorizations', height=0, command=f).pack()
+Button(algeria, text='Useful Factorizations', height=0, command=f).pack()
 # Number Theory
 nt = LabelFrame(second_frame, text='Number Theory', bg='orange', fg="blue")
 nt.pack(padx=5, pady=5)
