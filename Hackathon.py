@@ -190,10 +190,9 @@ def gp():
     messagebox.showinfo('Geometric Probability', 'The formula for Geometric Probability is\n(Size of Successful '
                                                  'Region)/(Size of possible region)')
 
-def chunky():
+def quadratics():
     top = Toplevel()
     Button(top, text='Quadratic Formula', height=0, command=q).pack()
-    Button(top, text='Useful Factorizations', height=0, command=f).pack()
     Button(top, text='Vieta\'s Formula', height=0, command=v).pack()
 
 
@@ -240,7 +239,8 @@ Button(algeria, text='Midpoint Formula', command=Midpoint, height=0).pack()
 Button(algeria, text='Arithmetic Mean', command=am, height=0).pack()
 Button(algeria, text='Geometry Mean', command=gm, height=0).pack()
 Button(algeria, text='Distance, Speed, and Time formula', height=0, command=dis).pack()
-Button(algeria, text='Quadratic Factoring Tricks', height=0, command=chunky).pack()
+Button(algeria, text='Quadratic Factoring Tricks', height=0, command=quadratics).pack()
+Button(top, text='Useful Factorizations', height=0, command=f).pack()
 # Number Theory
 nt = LabelFrame(second_frame, text='Number Theory', bg='orange', fg="blue")
 nt.pack(padx=5, pady=5)
