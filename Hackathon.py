@@ -52,7 +52,7 @@ def LinesIncircles():
     messagebox.showinfo(
         'Lines in Circle',
         'The diameter of a circle is the longest chord in the circle. A chord is any line in a circle that connects 2 '
-        'points on the circle. The radius is the line segment from the center of the circle to the circumfrence of a '
+        'points on the circle. The radius is the line segment from the center of the circle to the circumference of a '
         'circle. The radius is the half the diameter. None of these lines can be less than or equal to 0 '
     )
 
