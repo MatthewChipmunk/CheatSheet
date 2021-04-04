@@ -166,20 +166,17 @@ def gp():
 
 # Main Page
 root = Tk()
-root.geometry('400x600')
-
-
+# root.geometry('400x600')
 
 root.configure(bg='black')
-title = Font(family='Times', size=8, weight='bold', slant='italic')
+title = Font(family='Times', size=20, weight='bold', slant='italic')
 root.title('Math Formulas and Methods Cheat Sheet')
 
-
-# Label(root,
-# text='MATH FORMULAS AND METHODS CHEAT SHEET',
-# bg='black',
-# fg='cyan',
-# font=title).pack()
+Label(root,
+      text='MATH FORMULAS AND METHODS CHEAT SHEET',
+      bg='black',
+      fg='cyan',
+      font=title).pack()
 # Geometry
 bf = LabelFrame(root, text='Geometry', bg='light green', fg='dark orange')
 bf.pack(padx=10, pady=10)
@@ -220,4 +217,3 @@ Button(cp, text='Geometric Probability', height=0, command=gp).pack()
 
 # Game Loop
 root.mainloop()
-
