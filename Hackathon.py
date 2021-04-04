@@ -159,17 +159,21 @@ def v():
                                             'Sum of roots=-b/a\nProduct of roots=c/a')
 
 
+def gp():
+    messagebox.showinfo('Geometric Probability', 'The formula for Geometric Probability is\n(Size of Successful '
+                                                 'Region)/(Size of possible region)')
+
+
 # Main Page
 root = Tk()
 root.geometry('400x600')
-sb = Scrollbar(root)
-sb.pack(side=RIGHT, fill=Y)
 
-mylist = Listbox(root, yscrollcommand=sb.set)
+
 
 root.configure(bg='black')
 title = Font(family='Times', size=8, weight='bold', slant='italic')
 root.title('Math Formulas and Methods Cheat Sheet')
+
 
 # Label(root,
 # text='MATH FORMULAS AND METHODS CHEAT SHEET',
@@ -212,6 +216,8 @@ Button(cp, text='Casework Counting', command=casework, height=0).pack()
 Button(cp, text='Complementary Counting', command=complementary, height=0).pack()
 Button(cp, text='Constructive Counting', height=0, command=Constructive).pack()
 Button(cp, text='Basic Probability', command=basic_probability, height=0).pack()
+Button(cp, text='Geometric Probability', height=0, command=gp).pack()
 
 # Game Loop
 root.mainloop()
+
