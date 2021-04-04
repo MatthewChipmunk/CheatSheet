@@ -172,13 +172,30 @@ root.configure(bg='black')
 title = Font(family='Times', size=20, weight='bold', slant='italic')
 root.title('Math Formulas and Methods Cheat Sheet')
 
+
 Label(root,
-      text='MATH FORMULAS AND METHODS CHEAT SHEET',
-      bg='black',
-      fg='cyan',
-      font=title).pack()
+	text='MATH FORMULAS AND METHODS CHEAT SHEET',
+	bg='black',
+	fg='cyan',
+	font=title).pack()
+
+main_frame = Frame(root)
+main_frame.pack(fill=BOTH, expand=1)
+
+my_canvas = Canvas(main_frame)
+my_canvas.pack(side=LEFT, fill=BOTH, expand=1)
+
+my_scrollbar = ttk.Scrollbar(main_frame, orient=VERTICAL, command = my_canvas.yview)
+my_scrollbar.pack(side = RIGHT, fill = Y)
+my_canvas.configure(yscrollcommand=my_scrollbar.set)
+my_canvas.bind('<Configure>', lambda e: my_canvas.configure(scrollregion = my_canvas.bbox("all")))
+
+second_frame = Frame(my_canvas)
+my_canvas.create_window((0,0), window = second_frame, anchor = "nw")
+
+
 # Geometry
-bf = LabelFrame(root, text='Geometry', bg='light green', fg='dark orange')
+bf = LabelFrame(second_frame, text='Geometry', bg='light green', fg='dark orange')
 bf.pack(padx=10, pady=10)
 Button(bf, text='Pythagorean Theorem', command=pt, height=0).pack()
 Button(bf, text='Right Triangles', command=rightTriangles1, height=0).pack()
@@ -186,7 +203,7 @@ Button(bf, text='Circumference in Circles', command=cc, height=0).pack()
 Button(bf, text='Lines in Circles', command=LinesIncircles, height=0).pack()
 Button(bf, text='Area Of Circle', command=ac, height=0).pack()
 # Algebra
-algeria = LabelFrame(root, text='Algebra', bg='red', fg='green')
+algeria = LabelFrame(second_frame, text='Algebra', bg='red', fg='green')
 algeria.pack(padx=10, pady=10)
 Button(algeria, text='Slope Formula', command=Slope, height=0).pack()
 Button(algeria, text='Midpoint Formula', command=Midpoint, height=0).pack()
@@ -197,14 +214,14 @@ Button(algeria, text='Quadratic Formula', height=0, command=q).pack()
 Button(algeria, text='Useful Factorizations', height=0, command=f).pack()
 Button(algeria, text='Vieta\'s Formula', height=0, command=v).pack()
 # Number Theory
-nt = LabelFrame(root, text='Number Theory', bg='orange', fg="blue")
+nt = LabelFrame(second_frame, text='Number Theory', bg='orange', fg="blue")
 nt.pack(padx=5, pady=5)
 Button(nt, text='Palindrome', command=pali, height=0).pack()
 Button(nt, text='Modulo', command=modulo, height=0).pack()
 Button(nt, text='Factors', command=factors, height=0).pack()
 
 # Counting and Probability
-cp = LabelFrame(root,
+cp = LabelFrame(second_frame,
                 text='Counting and Probability',
                 bg='light blue',
                 fg='yellow')
